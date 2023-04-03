@@ -1,7 +1,9 @@
 # amdgpu-tools
 
 ## amdgpu_ips.py
-Enumerates amdgpu [IP blocks](https://www.kernel.org/doc/html/v5.10/gpu/amdgpu.html#ip-blocks) (name, version and base address):
+Enumerates amdgpu [IP blocks](https://www.kernel.org/doc/html/v5.10/gpu/amdgpu.html#ip-blocks), printing the IP blocks name, version and base address(es).
+
+Risk: **Harmless** - running this tool is completely safe, all operations are read-only.
 
 ```
 $ ./amdgpu_ips.py -h
@@ -55,7 +57,10 @@ SYSTEMHUB 2.5.0      0x00000EA0
 ```
 
 ## metrics
-Parses [`gpu_metrics`](https://dri.freedesktop.org/docs/drm/gpu/amdgpu.html#gpu-metrics):
+Parses [`gpu_metrics`](https://dri.freedesktop.org/docs/drm/gpu/amdgpu.html#gpu-metrics).
+A list of available metrics can be found at https://elixir.bootlin.com/linux/v6.3-rc5/source/drivers/gpu/drm/amd/include/kgd_pp_interface.h#L831.
+
+Risk: **Harmless** - running this tool is completely safe, all operations are read-only.
 
 ```
 $ meson setup build
@@ -70,4 +75,3 @@ average_socket_power: 8 W
 average_cpu_power: 1.68 W
 average_soc_power: 3.60 W
 ```
-Available metrics: https://elixir.bootlin.com/linux/v6.3-rc5/source/drivers/gpu/drm/amd/include/kgd_pp_interface.h#L831
