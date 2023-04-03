@@ -208,7 +208,7 @@ struct gpu_metrics_v2_3 {
     uint16_t            average_temperature_l3[2];
 };
 
-int main(int argc, char const *argv[])
+int main(void)
 {
     void *buf[MAX(sizeof(struct gpu_metrics_v1_3), MAX(sizeof(struct gpu_metrics_v2_2), sizeof(struct gpu_metrics_v2_3)))];
     metrics_table_header_t* header = (metrics_table_header_t*)buf;
