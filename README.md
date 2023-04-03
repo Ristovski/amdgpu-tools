@@ -70,3 +70,4 @@ average_socket_power: 8 W
 average_cpu_power: 1.68 W
 average_soc_power: 3.60 W
 ```
+Available metrics: https://elixir.bootlin.com/linux/v6.3-rc5/source/drivers/gpu/drm/amd/include/kgd_pp_interface.h#L831
